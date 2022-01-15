@@ -52,6 +52,8 @@ fn main() {
 
     condicionais();
     repeticoes();
+
+    ownership();
 }
 
 fn condicionais() {
@@ -109,4 +111,15 @@ fn repeticoes() {
     for i in 1..11 {
         println!("{} x {} = {}", multiplicador, i, multiplicador * i);
     }
+}
+
+fn ownership() {
+    let uma_string = String::from("Vinicius");
+    rouba(uma_string);
+
+    println!("{}", uma_string);
+}
+
+fn rouba(string: String) {
+    println!("{}", string);
 }
