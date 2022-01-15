@@ -1,6 +1,12 @@
 const PI:f32 = 3.14;
 static mut GLOBAL:u8 = 1;
 
+fn soma(a:i32, b:i32) -> i32
+{
+    println!("{} + {} = {}", a, b, a + b);
+    a + b
+}
+
 fn sombra() {
     let a = 123;
 
@@ -40,5 +46,7 @@ fn escopo() {
 fn main() {
     escopo();
     sombra();
+
+    println!("Soma = {}", soma(2, 2));
     // println!("decimal = {}", decimal);
 }
