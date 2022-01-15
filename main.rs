@@ -36,7 +36,7 @@ fn escopo() {
     let decimal:f32 = 2.5;
     println!("decimal = {}", decimal);
 
-    let mut booleana:bool = true;
+    let booleana:bool = true;
     println!("Booleana = {}, Tamanho booleana = {}", booleana, std::mem::size_of_val(&booleana));
 
     let letra:char = 'C';
@@ -49,4 +49,24 @@ fn main() {
 
     println!("Soma = {}", soma(2, 2));
     // println!("decimal = {}", decimal);
+
+    condicionais();
+}
+
+fn condicionais() {
+    let idade: u8 = 18;
+    let responsavel_autorizou = true;
+    let eh_maior = idade >= 18;
+
+    if eh_maior {
+        println!("Pode entrar na balada");
+    } else if idade > 16 && responsavel_autorizou {
+        println!("Pode entrar com assinatura do responsável");
+    } else {
+        println!("Não pode entrar na balada");
+    }
+
+    let condicao = if eh_maior { "maior" } else { "menor" };
+
+    println!("É {} de idade", condicao);
 }
