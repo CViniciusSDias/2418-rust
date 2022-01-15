@@ -1,4 +1,14 @@
+const PI:f32 = 3.14;
+static mut GLOBAL:u8 = 1;
+
 fn main() {
+    println!("PI = {}", PI);
+
+    unsafe {
+        println!("variavel_global = {}", GLOBAL);
+    }
+
+
     let variavel:i32 = 300;
     println!("variavel = {}, tamanho = {} bytes", variavel, std::mem::size_of_val(&variavel));
 
