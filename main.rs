@@ -56,6 +56,7 @@ fn main() {
     ownership();
 
     pattern_matching();
+    erros();
 }
 
 fn condicionais() {
@@ -137,4 +138,16 @@ fn pattern_matching() {
             _ => "Muito"
         });
     }
+}
+
+fn erros() {
+    match resultado() {
+        Ok(s) => println!("String de sucesso = {}", s),
+        Err(numero) => println!("Codigo de erro = {}", numero)
+    };
+}
+
+fn resultado() -> Result<String, u8>
+{
+    Err(42)
 }
